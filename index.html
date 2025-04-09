@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arbres du Lauragais - Élagage - Site en maintenance</title>
     <style>
-        /* Styles de base */
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -17,31 +16,14 @@
             min-height: 100vh;
             background-color: #f8f7f4;
             color: #333;
-            position: relative;
-            overflow: hidden;
-        }
-        /* Image de fond avec effet de flou */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('./4.png'); /* Image de fond */
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px) brightness(0.9);
-            z-index: -1;
         }
         .container {
             text-align: center;
             padding: 2rem;
             max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: white;
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             margin: 2rem;
         }
         .logo-container {
@@ -49,7 +31,7 @@
             padding: 1rem;
         }
         .logo {
-            max-width: 300px;
+            max-width: 200px;
             height: auto;
             margin: 0 auto;
             display: block;
@@ -58,19 +40,17 @@
             color: #2c5530;
             margin-bottom: 1.5rem;
             font-size: 2.2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         .services {
             color: #2c5530;
             font-size: 1.4rem;
             margin-bottom: 1.5rem;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         .message {
             margin: 2rem 0;
             padding: 1.5rem;
-            background-color: rgba(248, 247, 244, 0.9);
+            background-color: #f8f7f4;
             border-radius: 10px;
         }
         .message h2 {
@@ -80,7 +60,7 @@
         .contact {
             margin-top: 2rem;
             padding: 1.5rem;
-            background-color: rgba(248, 247, 244, 0.9);
+            background-color: #f8f7f4;
             border-radius: 10px;
         }
         .contact p {
@@ -113,12 +93,12 @@
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(44, 85, 48, 0.1);
         }
         .social-links a:hover {
             text-decoration: none;
             transform: translateY(-2px);
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(44, 85, 48, 0.2);
         }
         .social-icon {
             width: 24px;
@@ -148,13 +128,15 @@
             h1 {
                 font-size: 1.8rem;
             }
+            .logo {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo-container">
-            <!-- Logo principal -->
             <img src="./2.png" alt="Arbres du Lauragais - Logo" class="logo">
         </div>
         <h1>Arbres du Lauragais</h1>

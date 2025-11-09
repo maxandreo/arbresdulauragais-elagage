@@ -30,25 +30,29 @@ export default function ContactForm({ onSuccess, isCompact = false }: ContactFor
     setIsSubmitting(true);
 
     try {
-      // TODO: Implémenter l'appel API
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-      // Simulation pour le moment
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Erreur lors de l\'envoi');
+      }
 
       toast.success('Message envoyé avec succès !', {
-        description: 'Nous vous répondrons dans les plus brefs délais.',
+        description: result.message || 'Nous vous répondrons dans les plus brefs délais.',
       });
 
       reset();
       onSuccess?.();
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Erreur lors de l\'envoi';
+
       toast.error('Erreur lors de l\'envoi', {
-        description: 'Veuillez réessayer plus tard.',
+        description: errorMessage,
       });
     } finally {
       setIsSubmitting(false);

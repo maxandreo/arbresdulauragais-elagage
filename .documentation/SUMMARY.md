@@ -175,16 +175,18 @@
 
 **Durée estimée** : 1 jour
 
-### Phase 5 : API & Backend (0%)
+### Phase 5 : API & Backend (100%) ✅
 
 | Élément | État | Priorité |
 |---------|------|----------|
-| API Route Contact | ⏳ | Critique |
-| Service Email (Resend) | ⏳ | Critique |
-| Rate Limiting | ⏳ | Haute |
-| reCAPTCHA | ⏳ | Haute |
+| API Route Contact | ✅ | Critique |
+| Service Email (Resend) | ✅ | Critique |
+| Rate Limiting | ✅ | Haute |
+| reCAPTCHA | ✅ | Haute |
+| Templates Email | ✅ | Haute |
 
 **Durée estimée** : 1 jour
+**Durée réelle** : Terminé ✅
 
 ---
 
@@ -194,15 +196,15 @@
 Phase 1 : Configuration      ████████████████████ 100% ✅
 Phase 2 : Layout             ████████████████████ 100% ✅
 Phase 3 : Sections           ████████████████████ 100% ✅
-Phase 4 : Animations         ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Optionnel)
-Phase 5 : API                ░░░░░░░░░░░░░░░░░░░░   0% ⏳
+Phase 4 : Animations         ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Optionnel - Déjà beaucoup)
+Phase 5 : API                ████████████████████ 100% ✅
 Phase 6 : i18n               ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Optionnel)
 Phase 7 : Assets             ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 8 : Tests              ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 9 : Déploiement        ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 10: Post-launch        ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 
-Progression totale : ██████░░░░░░░░░░░░░░ 30%
+Progression totale : ████████░░░░░░░░░░░░ 40%
 ```
 
 ---
@@ -346,7 +348,8 @@ pnpm dev
 
 ---
 
-**Prochaine étape** : API & Backend (Phase 5) ou Assets (Phase 7)
-**Voir** : [PHASE-3-COMPLETE.md](../PHASE-3-COMPLETE.md) pour les détails
+**Prochaine étape** : Assets (Phase 7) ou Déploiement (Phase 9)
+**Voir** : [PHASE-5-COMPLETE.md](../PHASE-5-COMPLETE.md) pour les détails
+**Configuration** : [API-SETUP.md](./API-SETUP.md) pour Resend et reCAPTCHA
 
 **Bon développement !** 🌳

@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Toaster } from 'sonner';
 import './globals.css';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import FloatingButtons from '@/components/layout/FloatingButtons';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -41,7 +45,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main className="pt-20">{children}</main>
+        <Footer />
+        <FloatingButtons />
+        <Toaster position="top-right" richColors />
+      </body>
     </html>
   );
 }

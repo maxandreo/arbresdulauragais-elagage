@@ -135,16 +135,19 @@
 
 ## 🔄 Prochaines Phases
 
-### Phase 2 : Composants Layout (0%)
+### Phase 2 : Composants Layout (100%) ✅
 
 | Composant | État | Priorité |
 |-----------|------|----------|
-| Header | ⏳ | Critique |
-| Footer | ⏳ | Critique |
-| FloatingButtons | ⏳ | Haute |
-| Modal | ⏳ | Haute |
+| Header | ✅ | Critique |
+| Footer | ✅ | Critique |
+| FloatingButtons | ✅ | Haute |
+| Modal | ✅ | Haute |
+| ContactForm | ✅ | Haute |
+| useScrollSpy | ✅ | Haute |
 
 **Durée estimée** : 1-2 jours
+**Durée réelle** : Terminé ✅
 
 ### Phase 3 : Sections Principales (0%)
 
@@ -187,7 +190,7 @@
 
 ```
 Phase 1 : Configuration      ████████████████████ 100% ✅
-Phase 2 : Layout             ░░░░░░░░░░░░░░░░░░░░   0% ⏳
+Phase 2 : Layout             ████████████████████ 100% ✅
 Phase 3 : Sections           ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 4 : Animations         ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 5 : API                ░░░░░░░░░░░░░░░░░░░░   0% ⏳
@@ -197,7 +200,7 @@ Phase 8 : Tests              ░░░░░░░░░░░░░░░░░
 Phase 9 : Déploiement        ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 10: Post-launch        ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 
-Progression totale : ██░░░░░░░░░░░░░░░░░░ 10%
+Progression totale : ████░░░░░░░░░░░░░░░░ 20%
 ```
 
 ---
@@ -341,6 +344,7 @@ pnpm dev
 
 ---
 
-**Prochaine étape** : Créer le Header (Phase 2)
+**Prochaine étape** : Créer les sections principales (Phase 3)
+**Voir** : [PHASE-2-COMPLETE.md](../PHASE-2-COMPLETE.md) pour les détails
 
 **Bon développement !** 🌳

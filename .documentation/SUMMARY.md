@@ -149,18 +149,20 @@
 **Durée estimée** : 1-2 jours
 **Durée réelle** : Terminé ✅
 
-### Phase 3 : Sections Principales (0%)
+### Phase 3 : Sections Principales (100%) ✅
 
 | Section | État | Priorité |
 |---------|------|----------|
-| Hero | ⏳ | Critique |
-| Services | ⏳ | Critique |
-| WhyChooseUs | ⏳ | Haute |
-| Portfolio | ⏳ | Haute |
-| Reviews | ⏳ | Moyenne |
-| Contact | ⏳ | Critique |
+| Hero | ✅ | Critique |
+| Services | ✅ | Critique |
+| WhyChooseUs | ✅ | Haute |
+| Portfolio | ✅ | Haute |
+| Reviews | ✅ | Moyenne |
+| Contact | ✅ | Critique |
+| Lightbox | ✅ | Haute |
 
 **Durée estimée** : 2-3 jours
+**Durée réelle** : Terminé ✅
 
 ### Phase 4 : Animations (0%)
 
@@ -191,16 +193,16 @@
 ```
 Phase 1 : Configuration      ████████████████████ 100% ✅
 Phase 2 : Layout             ████████████████████ 100% ✅
-Phase 3 : Sections           ░░░░░░░░░░░░░░░░░░░░   0% ⏳
-Phase 4 : Animations         ░░░░░░░░░░░░░░░░░░░░   0% ⏳
+Phase 3 : Sections           ████████████████████ 100% ✅
+Phase 4 : Animations         ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Optionnel)
 Phase 5 : API                ░░░░░░░░░░░░░░░░░░░░   0% ⏳
-Phase 6 : i18n               ░░░░░░░░░░░░░░░░░░░░   0% ⏳
+Phase 6 : i18n               ░░░░░░░░░░░░░░░░░░░░   0% ⏳ (Optionnel)
 Phase 7 : Assets             ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 8 : Tests              ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 9 : Déploiement        ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 Phase 10: Post-launch        ░░░░░░░░░░░░░░░░░░░░   0% ⏳
 
-Progression totale : ████░░░░░░░░░░░░░░░░ 20%
+Progression totale : ██████░░░░░░░░░░░░░░ 30%
 ```
 
 ---
@@ -344,7 +346,7 @@ pnpm dev
 
 ---
 
-**Prochaine étape** : Créer les sections principales (Phase 3)
-**Voir** : [PHASE-2-COMPLETE.md](../PHASE-2-COMPLETE.md) pour les détails
+**Prochaine étape** : API & Backend (Phase 5) ou Assets (Phase 7)
+**Voir** : [PHASE-3-COMPLETE.md](../PHASE-3-COMPLETE.md) pour les détails
 
 **Bon développement !** 🌳

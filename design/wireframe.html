@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arbres du Lauragais Élagage – Élagage, abattage, démontage, haubanage, broyage, taille de haies. Devis gratuit, intervention rapide dans le Lauragais.">
+    <title>Arbres du Lauragais Élagage – Maquette landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand: #184e28;
+            --brand-contrast: #ffffff;
+            --text: #1a1a1a;
+            --muted: #666666;
+            --bg: #f8f7f4;
+            --card: #ffffff;
+            --accent: #2f8d4e;
+            --radius: 12px;
+            --shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+        .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+        header {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: saturate(180%) blur(8px);
+            border-bottom: 1px solid #eee;
+        }
+        .nav {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .brand-name { font-weight: 600; letter-spacing: -0.01em; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 10px 16px; border-radius: 999px; border: 1px solid var(--brand);
+            color: var(--brand); background: #fff; text-decoration: none; font-weight: 600;
+        }
+        .btn.primary { background: var(--brand); color: var(--brand-contrast); border-color: var(--brand); }
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        .hero { padding: 56px 0; background: linear-gradient(180deg, #ffffff 0%, #f9fbf9 100%); }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; }
+        .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; }
+        h1 { margin: 10px 0 8px; font-size: 2.2rem; line-height: 1.2; letter-spacing: -0.01em; }
+        .subtitle { color: var(--muted); margin: 0 0 18px; }
+        .hero-card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .hero-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; background: #e8efe9; }
+
+        section { padding: 64px 0; }
+        .section-title { font-size: 1.8rem; margin: 0 0 8px; }
+        .section-sub { color: var(--muted); margin: 0 0 24px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; }
+        .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .card p { margin: 0; color: var(--muted); }
+
+        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .ba { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 12px; }
+        .ba img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
+        .ba small { color: var(--muted); }
+
+        .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .review { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
+        .review strong { display: block; margin-bottom: 4px; }
+
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        form { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
+        label { display: block; font-weight: 500; margin: 8px 0 6px; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #e5e5e5; border-radius: 10px; font: inherit; }
+        textarea { min-height: 120px; }
+        .legal { font-size: 0.9rem; color: var(--muted); }
+
+        footer { background: #0f2f1b; color: #e6efe8; padding: 36px 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 24px; }
+        .footer a { color: #cfe6d7; text-decoration: none; }
+
+        .call-sticky { position: fixed; bottom: 16px; right: 16px; z-index: 60; }
+        .call-sticky .btn { box-shadow: var(--shadow); }
+
+        @media (max-width: 960px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .gallery { grid-template-columns: 1fr 1fr; }
+            .reviews { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 560px) {
+            .services-grid, .gallery, .footer-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <img src="../2.png" alt="Arbres du Lauragais – Logo">
+                <span class="brand-name">Arbres du Lauragais Élagage</span>
+            </div>
+            <nav class="nav-links" aria-label="Principale">
+                <a href="#prestations">Prestations</a>
+                <a href="#realisations">Réalisations</a>
+                <a href="#avis">Avis</a>
+                <a href="#contact">Contact</a>
+                <a class="btn" href="tel:0668565594">Appeler</a>
+                <a class="btn primary" href="#contact">Demander un devis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="eyebrow">Élagage • Abattage • Démontage • Haubanage • Broyage • Taille de haies</div>
+                    <h1>Élagage professionnel dans le Lauragais – sécurité, respect des arbres, finitions soignées</h1>
+                    <p class="subtitle">Devis gratuit, intervention rapide. Élagueur-grimpeur assuré, chantiers propres et sécurisés.</p>
+                    <div class="btn-group">
+                        <a class="btn primary" href="#contact">Demander un devis</a>
+                        <a class="btn" href="tel:0668565594">Appeler le 06 68 56 55 94</a>
+                    </div>
+                </div>
+                <div class="hero-card" aria-label="Avant / Après">
+                    <img src="../1.png" alt="Chantier d'élagage – avant (illustration)">
+                    <img src="../3.png" alt="Chantier d'élagage – après (illustration)">
+                </div>
+            </div>
+        </section>
+
+        <section id="prestations">
+            <div class="container">
+                <h2 class="section-title">Prestations</h2>
+                <p class="section-sub">Les 6 services clés. Chaque carte peut mener vers un détail ou un devis.</p>
+                <div class="services-grid">
+                    <div class="card"><h3>Élagage</h3><p>Taille sanitaire, d’entretien, de formation, éclaircie, fruitiers.</p></div>
+                    <div class="card"><h3>Abattage</h3><p>En milieu ouvert ou contraint, zone sécurisée.</p></div>
+                    <div class="card"><h3>Démontage</h3><p>Par rétention, grue si besoin, espaces exigus.</p></div>
+                    <div class="card"><h3>Haubanage</h3><p>Haubans statiques/dynamiques, diagnostic, suivi.</p></div>
+                    <div class="card"><h3>Broyage</h3><p>Broyage, évacuation, valorisation en paillage.</p></div>
+                    <div class="card"><h3>Taille de haies</h3><p>Remise à niveau, réduction de hauteur, finitions nettes.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="realisations">
+            <div class="container">
+                <h2 class="section-title">Réalisations (avant / après)</h2>
+                <p class="section-sub">Quelques chantiers récents. Remplacer par vos propres photos.</p>
+                <div class="gallery">
+                    <figure class="ba">
+                        <img src="../4.png" alt="Élagage – avant (illustration)">
+                        <img src="../5.png" alt="Élagage – après (illustration)">
+                        <figcaption><small>Élagage d’un chêne – Lauragais</small></figcaption>
+                    </figure>
+                    <figure class="ba">
+                        <img src="../6.png" alt="Abattage – avant (illustration)">
+                        <img src="../7.png" alt="Abattage – après (illustration)">
+                        <figcaption><small>Abattage contrôlé – jardin privé</small></figcaption>
+                    </figure>
+                    <figure class="ba">
+                        <img src="../8.png" alt="Taille de haies – avant (illustration)">
+                        <img src="../1.png" alt="Taille de haies – après (illustration)">
+                        <figcaption><small>Taille de haies – remise à niveau</small></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="avis">
+            <div class="container">
+                <h2 class="section-title">Avis clients</h2>
+                <p class="section-sub">Note Google et extraits récents (intégration badge officiel conseillée).</p>
+                <div class="reviews">
+                    <div class="review"><strong>Marie P.</strong><span>★★★★★</span><p>Travail impeccable et site laissé propre. Merci !</p></div>
+                    <div class="review"><strong>Thomas G.</strong><span>★★★★★</span><p>Intervention rapide, équipe pro, très satisfait.</p></div>
+                    <div class="review"><strong>Anne L.</strong><span>★★★★★</span><p>Excellent conseil pour la taille des fruitiers.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container contact-grid">
+                <div>
+                    <h2 class="section-title">Contact & Devis</h2>
+                    <p class="section-sub">Nous intervenons dans le Lauragais et alentours. Devis gratuit.</p>
+                    <div class="card">
+                        <p><strong>Téléphone</strong> : <a href="tel:0668565594">06 68 56 55 94</a></p>
+                        <p><strong>Email</strong> : <a href="mailto:Lucandreo@hotmail.fr">Lucandreo@hotmail.fr</a></p>
+                        <p><strong>Zone</strong> : Lauragais (à préciser)</p>
+                        <p class="legal">Assurance RC Pro. Mentions légales et politique de confidentialité à prévoir.</p>
+                    </div>
+                </div>
+                <form method="post" action="#" aria-label="Demande de devis">
+                    <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nom" required>
+                    <label for="prenom">Prénom</label>
+                    <input id="prenom" name="prenom" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+                    <label for="tel">Téléphone</label>
+                    <input id="tel" name="tel" type="tel" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Décrivez votre besoin (type d’arbre, accès, urgence…)"></textarea>
+                    <label><input type="checkbox" required> J’accepte d’être contacté à propos de ma demande</label>
+                    <div class="btn-group" style="margin-top:12px;">
+                        <button class="btn primary" type="submit">Envoyer la demande</button>
+                        <a class="btn" href="tel:0668565594">Appeler directement</a>
+                    </div>
+                    <p class="legal">Intégration possible: Formspree / Netlify Forms / EmailJS + reCAPTCHA/honeypot.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>Arbres du Lauragais Élagage</strong>
+                <p>Élagage • Abattage • Démontage • Haubanage • Broyage • Taille de haies</p>
+                <p>SIRET : à renseigner • RC Pro : assurée</p>
+            </div>
+            <div>
+                <p><a href="#">Mentions légales</a> • <a href="#">Politique de confidentialité</a></p>
+                <p>Horaires : à renseigner</p>
+            </div>
+            <div>
+                <p>Lauragais et alentours</p>
+                <p><a href="https://maps.google.com" target="_blank" rel="noopener">Voir sur Google Maps</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="call-sticky"><a class="btn primary" href="tel:0668565594">Appeler</a></div>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Arbres du Lauragais Élagage",
+        "image": "https://arbresdulauragais-elagage.fr/2.png",
+        "url": "https://arbresdulauragais-elagage.fr/",
+        "telephone": "+33668565594",
+        "areaServed": "Lauragais",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lauragais",
+            "addressCountry": "FR"
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61575220161201"
+        ]
+    }
+    </script>
+</body>
+</html>

@@ -1,8 +1,13 @@
 import { Resend } from 'resend';
 import { ContactFormData } from './validations';
 
-// Initialiser Resend
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Fonction pour obtenir l'instance Resend (lazy initialization)
+function getResendClient() {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error('RESEND_API_KEY non configurée');
+  }
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 /**
  * Envoie un email de notification au propriétaire
@@ -11,10 +16,11 @@ export async function sendContactEmail(data: ContactFormData) {
   const { firstName, lastName, email, phone, message } = data;
 
   try {
+    const resend = getResendClient();
     const { data: result, error } = await resend.emails.send({
       from: 'Contact Site <contact@arbresdulauragais-elagage.fr>',
       to: process.env.CONTACT_EMAIL || 'andreo.luc@example.com',
-      replyTo: email,
+      reply_to: email,
       subject: `Nouveau message de ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>
@@ -162,6 +168,7 @@ export async function sendConfirmationEmail(data: ContactFormData) {
   const { firstName, email } = data;
 
   try {
+    const resend = getResendClient();
     await resend.emails.send({
       from: 'Arbres du Lauragais <contact@arbresdulauragais-elagage.fr>',
       to: email,

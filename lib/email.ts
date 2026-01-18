@@ -14,7 +14,7 @@ export async function sendContactEmail(data: ContactFormData) {
     const { data: result, error } = await resend.emails.send({
       from: 'Contact Site <contact@arbresdulauragais-elagage.fr>',
       to: process.env.CONTACT_EMAIL || 'andreo.luc@example.com',
-      replyTo: email,
+      reply_to: email,
       subject: `Nouveau message de ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>
